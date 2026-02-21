@@ -40,7 +40,7 @@ export default function () {
     params
   );
 
-  // Verify login was successful
+  // Verify login was successfulé
   const loginSuccess = check(loginRes, {
     'login status is 200': (r) => r.status === 200,
     'login response time < 2000ms': (r) => r.timings.duration < 2000,
