@@ -1,0 +1,7 @@
+2026-02-21 13:42:10.381 [INF] Starting scenario: Open a new checking account
+2026-02-21 13:42:25.479 [ERR] Scenario failed: Open a new checking account
+2026-02-21 13:42:25.480 [ERR] Error: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "**/overview.htm" until "Load"
+============================================================
+2026-02-21 13:42:25.616 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02212026134225.png

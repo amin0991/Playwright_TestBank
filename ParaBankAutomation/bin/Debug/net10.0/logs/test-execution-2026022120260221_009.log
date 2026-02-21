@@ -1,0 +1,4 @@
+2026-02-21 13:42:40.702 [INF] Starting scenario: Failed login with invalid credentials
+2026-02-21 13:42:45.342 [ERR] Scenario failed: Failed login with invalid credentials
+2026-02-21 13:42:45.343 [ERR] Error: Expected errorMessage "An internal error has occurred and has been logged." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials.
+2026-02-21 13:42:45.486 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02212026134245.png
