@@ -1,0 +1,34 @@
+# Stage 1 - get .NET 10 SDK from official image
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS dotnet
+
+# Stage 2 - Jenkins with .NET copied in
+FROM jenkins/jenkins:lts
+
+USER root
+
+# Install Docker CLI and tools
+RUN apt-get update && apt-get install -y \
+    docker.io \
+    curl \
+    git \
+    libicu-dev \
+    libssl-dev
+
+# Copy .NET 10 SDK from official image
+COPY --from=dotnet /usr/share/dotnet /usr/share/dotnet
+RUN ln -s /usr/share/dotnet/dotnet /usr/local/bin/dotnet
+
+# Verify dotnet works
+RUN dotnet --version
+
+USER jenkins
+
+# Pre-install Jenkins plugins
+RUN jenkins-plugin-cli --plugins \
+    git \
+    workflow-aggregator \
+    docker-workflow \
+    junit \
+    htmlpublisher \
+    credentials-binding \
+    pipeline-stage-view
