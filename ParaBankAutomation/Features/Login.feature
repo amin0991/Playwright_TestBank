@@ -28,11 +28,11 @@ Feature: User Authentication
   @smoke
   Scenario Outline: Login with different invalid credential combinations
     When I login with username "<username>" and password "<password>"
-    Then I should see an error message "The username and password could not be verified."
+    Then I should see an error message "<expectedMessage>"
     
     Examples:
-      | username    | password    |
-      | john        | wrongpass   |
-      | invaliduser | demo        |
-      |             | demo        |
-      | john        |             |
+      | username    | password  | expectedMessage                                  |
+      | john        | wrongpass | The username and password could not be verified. |
+      | invaliduser | demo      | The username and password could not be verified. |
+      |             | demo      | Please enter a username and password.            |
+      | john        |           | Please enter a username and password.            |

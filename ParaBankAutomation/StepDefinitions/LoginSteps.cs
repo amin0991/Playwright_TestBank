@@ -30,14 +30,16 @@ namespace ParaBankAutomation.StepDefinitions
         public async Task GivenIAmLoggedInAsAValidUser()
         {
             await _loginPage.NavigateToLoginPage();
-            await _loginPage.Login("john", "demo");
+            await _loginPage.Login(_config.ValidUser.Username, _config.ValidUser.Password);
+
+            //await _loginPage.Login("john", "demo");
             await ThenIShouldSeeTheAccountOverviewPage();
         }
 
         [When(@"I login with valid credentials")]
         public async Task WhenILoginWithValidCredentials()
         {
-            await _loginPage.Login("john", "demo");
+            await _loginPage.Login(_config.ValidUser.Username, _config.ValidUser.Password);
         }
 
         [When(@"I login with username ""(.*)"" and password ""(.*)""")]

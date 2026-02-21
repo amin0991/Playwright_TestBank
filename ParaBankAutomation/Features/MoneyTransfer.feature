@@ -9,7 +9,7 @@ Feature: Inter-User Money Transfer
 
   @Positive @Critical
   Scenario: Send money from john to highbrow90
-    Given I am logged in as "john"
+    Given I am logged in as "john1"
     And I have at least one account with sufficient balance
     When I navigate to the bill pay page
     And I send 50 dollars to account of "highbrow90"
@@ -18,7 +18,7 @@ Feature: Inter-User Money Transfer
 
   @Positive
   Scenario: Send money between my own accounts
-    Given I am logged in as "john"
+    Given I am logged in as "john1"
     And I have multiple accounts
     When I navigate to the bill pay page
     And I send 25 dollars to my second account
@@ -26,7 +26,7 @@ Feature: Inter-User Money Transfer
 
   @Negative
   Scenario: Attempt to send money with insufficient funds
-    Given I am logged in as "john"
+    Given I am logged in as "john1"
     When I navigate to the bill pay page
     And I attempt to send 999999 dollars to account of "highbrow90"
     Then I should see an error about the payment

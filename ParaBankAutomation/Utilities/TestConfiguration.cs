@@ -50,7 +50,7 @@ namespace ParaBankAutomation.Utilities
         {
             return userName.ToLower() switch
             {
-                "john" => ValidUser,
+                "john" or "john1" => ValidUser,
                 "highbrow90" => SecondUser,
                 _ => ValidUser
             };
