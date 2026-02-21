@@ -54,7 +54,8 @@ namespace ParaBankAutomation.Hooks
 
             _context = await _browser.NewContextAsync(new BrowserNewContextOptions
             {
-                ViewportSize = new ViewportSize { Width = 1920, Height = 1080 }
+                ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
+                IgnoreHTTPSErrors = true    // ← ADD THIS LINE
             });
 
             _page = await _context.NewPageAsync();
