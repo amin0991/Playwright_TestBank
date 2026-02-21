@@ -61,18 +61,16 @@ pipeline {
         }
 
         stage('5 - Install Playwright Browsers') {
-            steps {
+           steps
+           {
                 echo '--- Downloading Chromium browser ---'
-                dir("${PROJECT_DIR}") {
-                    sh '''
-                        PW=$(find . -name 'playwright' -type f 2>/dev/null | head -1)
-                        if [ -n "$PW" ]; then
-                            $PW install chromium
-                        else
+                dir("${PROJECT_DIR}") 
+                {
+                        sh '''
+                            export PATH="$PATH:/root/.dotnet/tools"
                             dotnet tool install --global Microsoft.Playwright.CLI || true
-                            playwright install chromium || true
-                        fi
-                    '''
+                            /root/.dotnet/tools/playwright install chromium
+                            '''
                 }
             }
         }
