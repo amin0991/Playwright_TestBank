@@ -95,14 +95,13 @@ pipeline {
 
     }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'TestResults/**/*', allowEmptyArchive: true
-            junit testResults: 'TestResults/**/*.trx', allowEmptyResults: true
-        }
-        success  { echo 'ALL STAGES PASSED.' }
-        unstable { echo 'SOME TESTS FAILED — check TestResults/Report.html' }
-        failure  { echo 'PIPELINE FAILED — check Console Output.' }
+        post {
+            always {
+                archiveArtifacts artifacts: '**/TestResults/**/*', allowEmptyArchive: true
+                junit testResults: '**/TestResults/**/*.trx', allowEmptyResults: true
+            }
+            success  { echo 'ALL STAGES PASSED.' }
+            unstable { echo 'SOME TESTS FAILED — check TestResults/Report.html' }
+            failure  { echo 'PIPELINE FAILED — check Console Output.' }
     }
-
 }
