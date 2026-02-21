@@ -1,0 +1,7 @@
+2026-02-21 13:40:05.022 [INF] Starting scenario: Transfer funds between accounts
+2026-02-21 13:40:27.949 [ERR] Scenario failed: Transfer funds between accounts
+2026-02-21 13:40:27.950 [ERR] Error: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "**/overview.htm" until "Load"
+============================================================
+2026-02-21 13:40:28.082 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02212026134027.png
