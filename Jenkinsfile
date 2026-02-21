@@ -37,7 +37,7 @@ pipeline {
                         libatk-bridge2.0-0 libcups2 libdrm2 \
                         libdbus-1-3 libxkbcommon0 libxcomposite1 \
                         libxdamage1 libxfixes3 libxrandr2 \
-                        libgbm1 libasound2
+                        libgbm1 libasound2t64
                 '''
             }
         }
