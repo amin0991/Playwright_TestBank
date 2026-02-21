@@ -1,0 +1,7 @@
+2026-02-14 02:57:51.730 +01:00 [INF] Starting scenario: Successful logout
+2026-02-14 02:57:56.642 +01:00 [INF] Scenario passed: Successful logout
+2026-02-14 02:57:56.884 +01:00 [INF] Test run completed
+2026-02-14 03:05:10.086 +01:00 [INF] Starting scenario: Transfer funds between accounts
+2026-02-14 03:05:32.113 +01:00 [ERR] Scenario failed: Transfer funds between accounts
+2026-02-14 03:05:32.113 +01:00 [ERR] Error: Expected isSuccessful to be true because Transfer should be completed successfully, but found False.
+2026-02-14 03:05:32.273 +01:00 [INF] Screenshot saved: screenshots/Transfer_funds_between_accounts_20260214_030532.png

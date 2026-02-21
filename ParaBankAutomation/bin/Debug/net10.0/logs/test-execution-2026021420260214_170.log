@@ -1,0 +1,4 @@
+2026-02-14 12:24:30.343 [INF] Starting scenario: Open a new savings account
+2026-02-14 12:24:38.836 [ERR] Scenario failed: Open a new savings account
+2026-02-14 12:24:38.836 [ERR] Error: Expected accounts not to be empty because Account list should contain the new account.
+2026-02-14 12:24:38.998 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02142026122438.png

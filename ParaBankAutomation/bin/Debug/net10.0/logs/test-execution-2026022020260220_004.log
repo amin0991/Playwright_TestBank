@@ -1,0 +1,6 @@
+2026-02-20 15:06:54.387 [INF] Starting scenario: Attempt to send money with insufficient funds
+2026-02-20 15:07:30.508 [ERR] Scenario failed: Attempt to send money with insufficient funds
+2026-02-20 15:07:30.508 [ERR] Error: Timeout 30000ms exceeded.
+Call log:
+  - waiting for Locator("input[name='username']")
+2026-02-20 15:07:30.692 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02202026150730.png

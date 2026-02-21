@@ -1,0 +1,4 @@
+2026-02-14 03:06:06.592 +01:00 [INF] Starting scenario: View account overview
+2026-02-14 03:06:11.270 +01:00 [ERR] Scenario failed: View account overview
+2026-02-14 03:06:11.270 +01:00 [ERR] Error: Expected accountCount to be greater than 0 because User should have at least one account, but found 0.
+2026-02-14 03:06:11.439 +01:00 [INF] Screenshot saved: screenshots/View_account_overview_20260214_030611.png

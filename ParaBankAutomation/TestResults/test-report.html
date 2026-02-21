@@ -1,0 +1,655 @@
+﻿<html xmlns:tp="http://schemas.datacontract.org/2004/07/Microsoft.VisualStudio.TestPlatform.Extensions.HtmlLogger.ObjectModel" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <body>
+    <h1>Test run details</h1>
+    <div class="summary">
+      <div class="block"><span>Total tests</span><div class="total-tests">13</div><br></div>
+      <div class="block"><span>Passed  : </span><span class="passedTests">6</span><br><span>Failed  : </span><span class="failedTests">7</span><br><span>Skipped : </span><span class="skippedTests">0</span><br></div>
+      <div class="block"><span>Pass percentage</span><div class="pass-percentage">46 %</div><br></div>
+      <div class="block"><span>Run duration</span><div class="test-run-time">1m 57s</div><br></div><br></div>
+    <h2>Failed Results</h2><details open=""><summary>C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\ParaBankAutomation.dll</summary><div class="inner-row" Id="-1851275830-failedResult">
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> TransferFundsBetweenAccounts​</span><div class="duration"><span>23s 771ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected isSuccessful to be true because Transfer should be completed successfully, but found False.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.AccountOperationsSteps.ThenIShouldSeeATransferConfirmationMessage() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\AccountOperationsSteps.cs:line 90
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.AccountOperationsFeature.TransferFundsBetweenAccounts() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\AccountOperations.feature:line 22
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> ValidateInsufficientFundsTransfer​</span><div class="duration"><span>23s 6ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected errorMessage not to be &lt;null&gt; or empty because Should display an error for insufficient funds, but found "".</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.StringAssertions`1.NotBeNullOrEmpty(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.AccountOperationsSteps.ThenIShouldSeeAnErrorMessageIndicatingInsufficientFunds() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\AccountOperationsSteps.cs:line 105
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ValidateInsufficientFundsTransfer() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\AccountOperations.feature:line 36
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> ViewAccountOverview​</span><div class="duration"><span>5s 94ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected accountCount to be greater than 0 because User should have at least one account, but found 0.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Numeric.NumericAssertions`2.BeGreaterThan(T expected, String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.AccountOperationsSteps.ThenIShouldSeeAListOfMyAccounts() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\AccountOperationsSteps.cs:line 38
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ViewAccountOverview() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\AccountOperations.feature:line 14
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> OpenANewCheckingAccount​</span><div class="duration"><span>10s 421ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected isCreated to be true because New account should be created successfully, but found False.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.NewAccountSteps.ThenIShouldSeeAConfirmationMessageForTheNewAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\NewAccountSteps.cs:line 55
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.OpenANewCheckingAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\NewAccount.feature:line 26
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> OpenANewSavingsAccount​</span><div class="duration"><span>10s 265ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected isCreated to be true because New account should be created successfully, but found False.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.NewAccountSteps.ThenIShouldSeeAConfirmationMessageForTheNewAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\NewAccountSteps.cs:line 55
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.OpenANewSavingsAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\NewAccount.feature:line 17
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> LoginWithDifferentInvalidCredentialCombinations("","demo",null)​</span><div class="duration"><span>4s 816ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected errorMessage "Please enter a username and password." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.StringAssertions`1.Contain(String expected, String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.LoginSteps.ThenIShouldSeeAnErrorMessage(String expectedError) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\LoginSteps.cs:line 79
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(String username, String password, String[] exampleTags) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\Login.feature:line 31
+   at InvokeStub_UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(Object, Span`1)
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> LoginWithDifferentInvalidCredentialCombinations("john","",null)​</span><div class="duration"><span>4s 339ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected errorMessage "Please enter a username and password." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.StringAssertions`1.Contain(String expected, String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.LoginSteps.ThenIShouldSeeAnErrorMessage(String expectedError) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\LoginSteps.cs:line 79
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(String username, String password, String[] exampleTags) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\Login.feature:line 31
+   at InvokeStub_UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(Object, Span`1)
+
+</pre></span><br></div>
+        </div>
+      </div></details><h2>All Results</h2><details><summary>C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\ParaBankAutomation.dll</summary><div class="inner-row" Id="-1851275830">
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> TransferFundsBetweenAccounts​</span><div class="duration"><span>23s 771ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected isSuccessful to be true because Transfer should be completed successfully, but found False.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.AccountOperationsSteps.ThenIShouldSeeATransferConfirmationMessage() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\AccountOperationsSteps.cs:line 90
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.AccountOperationsFeature.TransferFundsBetweenAccounts() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\AccountOperations.feature:line 22
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> ValidateInsufficientFundsTransfer​</span><div class="duration"><span>23s 6ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected errorMessage not to be &lt;null&gt; or empty because Should display an error for insufficient funds, but found "".</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.StringAssertions`1.NotBeNullOrEmpty(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.AccountOperationsSteps.ThenIShouldSeeAnErrorMessageIndicatingInsufficientFunds() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\AccountOperationsSteps.cs:line 105
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ValidateInsufficientFundsTransfer() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\AccountOperations.feature:line 36
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="pass">✔</span><span> ViewAccountActivity​</span><div class="duration"><span>11s 42ms</span><br></div>
+          </div>
+          <div class="error-info"></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> ViewAccountOverview​</span><div class="duration"><span>5s 94ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected accountCount to be greater than 0 because User should have at least one account, but found 0.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Numeric.NumericAssertions`2.BeGreaterThan(T expected, String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.AccountOperationsSteps.ThenIShouldSeeAListOfMyAccounts() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\AccountOperationsSteps.cs:line 38
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.AccountOperationsFeature.ViewAccountOverview() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\AccountOperations.feature:line 14
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> OpenANewCheckingAccount​</span><div class="duration"><span>10s 421ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected isCreated to be true because New account should be created successfully, but found False.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.NewAccountSteps.ThenIShouldSeeAConfirmationMessageForTheNewAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\NewAccountSteps.cs:line 55
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.OpenANewCheckingAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\NewAccount.feature:line 26
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> OpenANewSavingsAccount​</span><div class="duration"><span>10s 265ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected isCreated to be true because New account should be created successfully, but found False.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.NewAccountSteps.ThenIShouldSeeAConfirmationMessageForTheNewAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\NewAccountSteps.cs:line 55
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.NewAccountCreationFeature.OpenANewSavingsAccount() in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\NewAccount.feature:line 17
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="pass">✔</span><span> FailedLoginWithInvalidCredentials​</span><div class="duration"><span>4s 340ms</span><br></div>
+          </div>
+          <div class="error-info"></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="pass">✔</span><span> LoginWithDifferentInvalidCredentialCombinations("john","wrongpass",null)​</span><div class="duration"><span>4s 289ms</span><br></div>
+          </div>
+          <div class="error-info"></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="pass">✔</span><span> LoginWithDifferentInvalidCredentialCombinations("invaliduser","demo",null)​</span><div class="duration"><span>4s 322ms</span><br></div>
+          </div>
+          <div class="error-info"></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> LoginWithDifferentInvalidCredentialCombinations("","demo",null)​</span><div class="duration"><span>4s 816ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected errorMessage "Please enter a username and password." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.StringAssertions`1.Contain(String expected, String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.LoginSteps.ThenIShouldSeeAnErrorMessage(String expectedError) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\LoginSteps.cs:line 79
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(String username, String password, String[] exampleTags) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\Login.feature:line 31
+   at InvokeStub_UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(Object, Span`1)
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="fail">✘</span><span> LoginWithDifferentInvalidCredentialCombinations("john","",null)​</span><div class="duration"><span>4s 339ms</span><br></div>
+          </div>
+          <div class="error-info">
+    Error: <span class="error-message"><pre>Expected errorMessage "Please enter a username and password." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials.</pre></span><br>
+    Stack trace: <span class="error-stack-trace"><pre>   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.StringAssertions`1.Contain(String expected, String because, Object[] becauseArgs)
+   at ParaBankAutomation.StepDefinitions.LoginSteps.ThenIShouldSeeAnErrorMessage(String expectedError) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\StepDefinitions\LoginSteps.cs:line 79
+   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.ScenarioCleanup()
+   at ParaBankAutomation.Features.UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(String username, String password, String[] exampleTags) in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\Features\Login.feature:line 31
+   at InvokeStub_UserAuthenticationFeature.LoginWithDifferentInvalidCredentialCombinations(Object, Span`1)
+
+</pre></span><br></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="pass">✔</span><span> SuccessfulLoginWithValidCredentials​</span><div class="duration"><span>4s 211ms</span><br></div>
+          </div>
+          <div class="error-info"></div>
+        </div>
+        <div class="leaf-division">
+          <div><span class="pass">✔</span><span> SuccessfulLogout​</span><div class="duration"><span>4s 954ms</span><br></div>
+          </div>
+          <div class="error-info"></div>
+        </div>
+      </div></details><div>
+      <h2>Informational messages</h2><span>NUnit Adapter 4.5.0.0: Test execution started</span><br><span>Running all tests in C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\ParaBankAutomation.dll</span><br><span>   NUnit3TestExecutor discovered 13 of 13 NUnit test cases using Current Discovery mode, Non-Explicit run</span><br><span>NUnit Adapter 4.5.0.0: Test execution complete</span><br></div>
+    <div>
+      <h2>Error and Warning messages</h2><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (2.5s)
+And I am logged in as a valid user
+-&gt; done: LoginSteps.GivenIAmLoggedInAsAValidUser() (1.2s)
+Given I have multiple accounts with sufficient balance
+-&gt; done: AccountOperationsSteps.GivenIHaveMultipleAccountsWithSufficientBalance() (0.0s)
+When I navigate to the transfer funds page
+-&gt; done: AccountOperationsSteps.WhenINavigateToTheTransferFundsPage() (0.3s)
+And I transfer 100 dollars from account 1 to account 2
+-&gt; done: AccountOperationsSteps.WhenITransferDollarsFromAccountToAccount(100, 1, 2) (0.1s)
+Then I should see a transfer confirmation message
+-&gt; error: Expected isSuccessful to be true because Transfer should be completed successfully, but found False. (5.1s)
+And the transfer should be reflected in the account balances
+-&gt; skipped because of previous errors
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.7s)
+And I am logged in as a valid user
+-&gt; done: LoginSteps.GivenIAmLoggedInAsAValidUser() (0.9s)
+Given I have multiple accounts
+Warning: User has only 0 account(s). Transfer tests may fail.
+-&gt; done: AccountOperationsSteps.GivenIHaveMultipleAccountsWithSufficientBalance() (0.0s)
+When I navigate to the transfer funds page
+-&gt; done: AccountOperationsSteps.WhenINavigateToTheTransferFundsPage() (0.3s)
+And I attempt to transfer 999999 dollars from account 1 to account 2
+-&gt; done: AccountOperationsSteps.WhenIAttemptToTransferDollarsFromAccountToAccount(999999, 1, 2) (0.1s)
+Then I should see an error message indicating insufficient funds
+-&gt; error: Expected errorMessage not to be &lt;null&gt; or empty because Should display an error for insufficient funds, but found "". (3.0s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.6s)
+And I am logged in as a valid user
+-&gt; done: LoginSteps.GivenIAmLoggedInAsAValidUser() (0.8s)
+When I navigate to account activity for my first account
+-&gt; done: AccountOperationsSteps.WhenINavigateToAccountActivityForMyFirstAccount() (0.5s)
+Then I should see the account details
+-&gt; done: AccountOperationsSteps.ThenIShouldSeeTheAccountDetails() (0.0s)
+And I should see a list of recent transactions
+-&gt; done: AccountOperationsSteps.ThenIShouldSeeAListOfRecentTransactions() (3.0s)
+And each transaction should display date, description, and amount
+-&gt; done: AccountOperationsSteps.ThenEachTransactionShouldDisplayDateDescriptionAndAmount() (3.0s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.7s)
+And I am logged in as a valid user
+-&gt; done: LoginSteps.GivenIAmLoggedInAsAValidUser() (0.9s)
+When I navigate to the accounts overview page
+-&gt; done: AccountOperationsSteps.WhenINavigateToTheAccountsOverviewPage() (0.3s)
+Then I should see a list of my accounts
+-&gt; error: Expected accountCount to be greater than 0 because User should have at least one account, but found 0. (0.0s)
+And each account should display account number and balance
+-&gt; skipped because of previous errors
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.8s)
+And I am logged in as a valid user
+-&gt; done: LoginSteps.GivenIAmLoggedInAsAValidUser() (0.9s)
+When I navigate to the open new account page
+-&gt; done: NewAccountSteps.WhenINavigateToTheOpenNewAccountPage() (0.2s)
+And I select "CHECKING" as account type
+-&gt; done: NewAccountSteps.WhenISelectAsAccountType("CHECKING") (0.0s)
+And I select an existing account to transfer initial funds from
+-&gt; done: NewAccountSteps.WhenISelectAnExistingAccountToTransferInitialFundsFrom() (0.0s)
+And I click the open new account button
+-&gt; done: NewAccountSteps.WhenIClickTheOpenNewAccountButton() (0.1s)
+Then I should see a confirmation message for the new account
+-&gt; error: Expected isCreated to be true because New account should be created successfully, but found False. (5.1s)
+And the new account number should be displayed
+-&gt; skipped because of previous errors
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.6s)
+And I am logged in as a valid user
+-&gt; done: LoginSteps.GivenIAmLoggedInAsAValidUser() (0.9s)
+When I navigate to the open new account page
+-&gt; done: NewAccountSteps.WhenINavigateToTheOpenNewAccountPage() (0.3s)
+And I select "SAVINGS" as account type
+-&gt; done: NewAccountSteps.WhenISelectAsAccountType("SAVINGS") (0.0s)
+And I select an existing account to transfer initial funds from
+-&gt; done: NewAccountSteps.WhenISelectAnExistingAccountToTransferInitialFundsFrom() (0.0s)
+And I click the open new account button
+-&gt; done: NewAccountSteps.WhenIClickTheOpenNewAccountButton() (0.0s)
+Then I should see a confirmation message for the new account
+-&gt; error: Expected isCreated to be true because New account should be created successfully, but found False. (5.0s)
+And the new account should appear in my accounts overview
+-&gt; skipped because of previous errors
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.7s)
+When I login with username "invaliduser" and password "wrongpass"
+-&gt; done: LoginSteps.WhenILoginWithUsernameAndPassword("invaliduser", "wrongpass") (0.3s)
+Then I should see an error message "The username and password could not be verified."
+-&gt; done: LoginSteps.ThenIShouldSeeAnErrorMessage("The username and ...") (0.1s)
+And I should remain on the login page
+-&gt; done: LoginSteps.ThenIShouldRemainOnTheLoginPage() (0.0s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.7s)
+When I login with username "john" and password "wrongpass"
+-&gt; done: LoginSteps.WhenILoginWithUsernameAndPassword("john", "wrongpass") (0.3s)
+Then I should see an error message "The username and password could not be verified."
+-&gt; done: LoginSteps.ThenIShouldSeeAnErrorMessage("The username and ...") (0.1s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.7s)
+When I login with username "invaliduser" and password "demo"
+-&gt; done: LoginSteps.WhenILoginWithUsernameAndPassword("invaliduser", "demo") (0.3s)
+Then I should see an error message "The username and password could not be verified."
+-&gt; done: LoginSteps.ThenIShouldSeeAnErrorMessage("The username and ...") (0.1s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.9s)
+When I login with username "" and password "demo"
+-&gt; done: LoginSteps.WhenILoginWithUsernameAndPassword("", "demo") (0.3s)
+Then I should see an error message "The username and password could not be verified."
+-&gt; error: Expected errorMessage "Please enter a username and password." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials. (0.1s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.7s)
+When I login with username "john" and password ""
+-&gt; done: LoginSteps.WhenILoginWithUsernameAndPassword("john", "") (0.3s)
+Then I should see an error message "The username and password could not be verified."
+-&gt; error: Expected errorMessage "Please enter a username and password." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials. (0.1s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.6s)
+When I login with valid credentials
+-&gt; done: LoginSteps.WhenILoginWithValidCredentials() (0.6s)
+Then I should see the account overview page
+-&gt; done: LoginSteps.ThenIShouldSeeTheAccountOverviewPage() (0.0s)
+And I should see a welcome message with the username
+-&gt; done: LoginSteps.ThenIShouldSeeAWelcomeMessageWithTheUsername() (0.0s)
+</span><br><span>Given I am on the ParaBank home page
+-&gt; done: LoginSteps.GivenIAmOnTheParaBankHomePage() (1.7s)
+Given I am logged in as a valid user
+-&gt; done: LoginSteps.GivenIAmLoggedInAsAValidUser() (0.8s)
+When I click on the logout link
+-&gt; done: LoginSteps.WhenIClickOnTheLogoutLink() (0.4s)
+Then I should be redirected to the login page
+-&gt; done: LoginSteps.ThenIShouldBeRedirectedToTheLoginPage() (0.0s)
+And I should see the login form
+-&gt; done: LoginSteps.ThenIShouldSeeTheLoginForm() (0.0s)
+</span><br></div>
+  </body>
+  <style>
+        body { font-family: Calibri, Verdana, Arial, sans-serif; background-color: White; color: Black; }
+        h2 {
+        margin-top: 15px;
+        margin-bottom:10px;
+        }
+        pre {
+        white-space: pre-wrap;
+        }
+        .summary {font-family:monospace;
+        display: -webkit-flex; /* Safari */
+        -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .row {
+        border: 2px solid #ffffff;
+        width:100%;
+        cursor:pointer;
+        background-color:#d7e9fa;
+        }
+        .list-row {
+        border: 2px solid #ffffff;
+        width:100%;
+        cursor:pointer;
+        background-color:#ffffff;
+        }
+        .inner-row{
+        border: 2px solid #ffffff;
+        padding-left:1%;
+        margin-left:1%;
+        background-color:#ffffff;
+        }
+        .block{
+        width : 150px;
+        }
+        .leaf-division{
+        border: 2px solid #ffffff;
+        background-color:#e6eff7;
+        }
+        .pass { color: #0c0; }
+        .fail { color: #c00; }
+        .error-message { color : brown; }
+        .error-stack-trace { color: brown; }
+        .duration {float:right;padding-right:1%;}
+        .total-tests { font-size : 30px}
+        .test-run-time { font-size : 30px}
+        .pass-percentage { font-size : 30px}
+        .error-info{
+        margin-left:16px;
+        }
+      </style>
+</html>

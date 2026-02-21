@@ -1,0 +1,4 @@
+2026-02-20 15:06:05.881 [INF] Starting scenario: Validate insufficient funds transfer
+2026-02-20 15:06:11.494 [ERR] Scenario failed: Validate insufficient funds transfer
+2026-02-20 15:06:11.495 [ERR] Error: User needs at least 2 accounts for this test, but has 0
+2026-02-20 15:06:11.820 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02202026150611.png

@@ -1,0 +1,4 @@
+2026-02-14 02:57:14.645 +01:00 [INF] Starting scenario: Open a new savings account
+2026-02-14 02:57:24.558 +01:00 [ERR] Scenario failed: Open a new savings account
+2026-02-14 02:57:24.558 +01:00 [ERR] Error: Expected isCreated to be true because New account should be created successfully, but found False.
+2026-02-14 02:57:24.736 +01:00 [INF] Screenshot saved: screenshots/Open_a_new_savings_account_20260214_025724.png

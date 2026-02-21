@@ -1,0 +1,4 @@
+2026-02-14 02:57:43.049 +01:00 [INF] Starting scenario: Login with different invalid credential combinations
+2026-02-14 02:57:46.977 +01:00 [ERR] Scenario failed: Login with different invalid credential combinations
+2026-02-14 02:57:46.977 +01:00 [ERR] Error: Expected errorMessage "Please enter a username and password." to contain "The username and password could not be verified." because Error message should be displayed for invalid credentials.
+2026-02-14 02:57:47.155 +01:00 [INF] Screenshot saved: screenshots/Login_with_different_invalid_credential_combinations_20260214_025746.png

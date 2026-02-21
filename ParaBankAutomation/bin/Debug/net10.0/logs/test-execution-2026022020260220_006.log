@@ -1,0 +1,4 @@
+2026-02-20 15:07:37.662 [INF] Starting scenario: Send money from john to highbrow90
+2026-02-20 15:07:43.174 [ERR] Scenario failed: Send money from john to highbrow90
+2026-02-20 15:07:43.174 [ERR] Error: Expected accounts not to be empty because User should have at least one account.
+2026-02-20 15:07:43.339 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02202026150743.png

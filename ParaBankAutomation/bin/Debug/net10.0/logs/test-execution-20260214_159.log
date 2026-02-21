@@ -1,0 +1,4 @@
+2026-02-14 03:05:32.569 +01:00 [INF] Starting scenario: Validate insufficient funds transfer
+2026-02-14 03:05:55.110 +01:00 [ERR] Scenario failed: Validate insufficient funds transfer
+2026-02-14 03:05:55.111 +01:00 [ERR] Error: Expected errorMessage not to be <null> or empty because Should display an error for insufficient funds, but found "".
+2026-02-14 03:05:55.283 +01:00 [INF] Screenshot saved: screenshots/Validate_insufficient_funds_transfer_20260214_030555.png

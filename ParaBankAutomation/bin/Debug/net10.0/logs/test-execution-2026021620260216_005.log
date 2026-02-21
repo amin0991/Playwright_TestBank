@@ -1,0 +1,8 @@
+2026-02-16 11:40:35.953 [INF] Starting scenario: Send money between my own accounts
+2026-02-16 11:40:42.380 [ERR] Scenario failed: Send money between my own accounts
+2026-02-16 11:40:42.381 [ERR] Error: User needs at least 2 accounts for this test, but has 0
+2026-02-16 11:40:52.390 [WRN] Failed to capture screenshot: Timeout 10000ms exceeded.
+Call log:
+  - taking page screenshot
+  - waiting for fonts to load...
+  - fonts loaded

@@ -1,0 +1,4 @@
+2026-02-14 03:06:11.690 +01:00 [INF] Starting scenario: Open a new checking account
+2026-02-14 03:06:21.690 +01:00 [ERR] Scenario failed: Open a new checking account
+2026-02-14 03:06:21.691 +01:00 [ERR] Error: Expected isCreated to be true because New account should be created successfully, but found False.
+2026-02-14 03:06:21.867 +01:00 [INF] Screenshot saved: screenshots/Open_a_new_checking_account_20260214_030621.png
