@@ -49,17 +49,16 @@ pipeline {
                     }
                 }
 
-                stage('5 - Install Playwright Browsers') {
-                    steps {
-                        dir("${PROJECT_DIR}") {
-                            sh '''
-                                export PATH="$PATH:/root/.dotnet/tools"
-                                dotnet tool install --global Microsoft.Playwright.CLI || true
-                                /root/.dotnet/tools/playwright install chromium
-                            '''
+              stage('5 - Install Playwright Browsers') {
+                        steps {
+                            dir(PROJECT_DIR) {
+                                sh '''
+                                    dotnet tool install --tool-path ./pw-cli Microsoft.Playwright.CLI || true
+                                    ./pw-cli/playwright install chromium
+                                '''
+                            }
                         }
                     }
-                }
 
                 stage('6 - Execute Tests') {
                     steps {
