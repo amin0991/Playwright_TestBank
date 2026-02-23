@@ -198,11 +198,11 @@ namespace ParaBankAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login with different invalid credential combinations")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        [NUnit.Framework.TestCaseAttribute("john", "wrongpass", null)]
-        [NUnit.Framework.TestCaseAttribute("invaliduser", "demo", null)]
-        [NUnit.Framework.TestCaseAttribute("", "demo", null)]
-        [NUnit.Framework.TestCaseAttribute("john", "", null)]
-        public void LoginWithDifferentInvalidCredentialCombinations(string username, string password, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("john", "wrongpass", "The username and password could not be verified.", null)]
+        [NUnit.Framework.TestCaseAttribute("invaliduser", "demo", "The username and password could not be verified.", null)]
+        [NUnit.Framework.TestCaseAttribute("", "demo", "Please enter a username and password.", null)]
+        [NUnit.Framework.TestCaseAttribute("john", "", "Please enter a username and password.", null)]
+        public void LoginWithDifferentInvalidCredentialCombinations(string username, string password, string expectedMessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "smoke"};
@@ -214,6 +214,7 @@ namespace ParaBankAutomation.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
+            argumentsOfScenario.Add("expectedMessage", expectedMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login with different invalid credential combinations", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 29
   this.ScenarioInitialize(scenarioInfo);
@@ -232,7 +233,7 @@ namespace ParaBankAutomation.Features
     testRunner.When(string.Format("I login with username \"{0}\" and password \"{1}\"", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
-    testRunner.Then("I should see an error message \"The username and password could not be verified.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("I should see an error message \"{0}\"", expectedMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
