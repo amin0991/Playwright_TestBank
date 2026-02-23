@@ -1,0 +1,4 @@
+2026-02-23 21:13:53.940 [INF] Starting scenario: View account overview
+2026-02-23 21:14:00.680 [ERR] Scenario failed: View account overview
+2026-02-23 21:14:00.680 [ERR] Error: Expected accountCount to be greater than 0 because User should have at least one account, but found 0.
+2026-02-23 21:14:00.800 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02232026211400.png

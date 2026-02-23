@@ -1,0 +1,26 @@
+2026-02-23 21:15:45.874 [INF] Starting scenario: Login with different invalid credential combinations
+2026-02-23 21:16:01.254 [ERR] Scenario failed: Login with different invalid credential combinations
+2026-02-23 21:16:01.254 [ERR] Error: Timeout 10000ms exceeded.
+Call log:
+  - waiting for Locator(".error") to be visible
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+  -   locator resolved to hidden <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+2026-02-23 21:16:01.360 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02232026211601.png

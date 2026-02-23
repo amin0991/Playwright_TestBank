@@ -1,0 +1,4 @@
+2026-02-23 21:14:37.881 [INF] Starting scenario: Send money between my own accounts
+2026-02-23 21:14:44.008 [ERR] Scenario failed: Send money between my own accounts
+2026-02-23 21:14:44.009 [ERR] Error: User needs at least 2 accounts for this test, but has 0
+2026-02-23 21:14:44.129 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02232026211444.png

@@ -1,0 +1,4 @@
+2026-02-23 21:12:43.976 [INF] Starting scenario: Transfer funds between accounts
+2026-02-23 21:13:09.957 [ERR] Scenario failed: Transfer funds between accounts
+2026-02-23 21:13:09.957 [ERR] Error: Expected isSuccessful to be true because Transfer should be completed successfully, but found False.
+2026-02-23 21:13:10.068 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02232026211309.png
