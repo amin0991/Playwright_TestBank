@@ -28,7 +28,7 @@ pipeline {
                         echo '--- LOCAL: Cloning repository ---'
                         checkout scm
                         sh "ls -la ${PROJECT_DIR}/"
-                        sh "chmod -R 777 ${PROJECT_DIR}/obj ${PROJECT_DIR}/bin || true"
+                        sh "rm -rf ${PROJECT_DIR}/bin ${PROJECT_DIR}/obj || true"   // ← clean slate every build
                         sh "chmod -R 777 /var/jenkins_home/.nuget || true"
                     }
                 }
