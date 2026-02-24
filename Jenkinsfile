@@ -3,7 +3,7 @@ pipeline {
     agent none
 
     environment {
-        IS_LOCAL                 = 'true'
+        IS_LOCAL                 = 'false'
         PROJECT_DIR              = 'ParaBankAutomation'
         PLAYWRIGHT_BROWSERS_PATH = '0'
     }
