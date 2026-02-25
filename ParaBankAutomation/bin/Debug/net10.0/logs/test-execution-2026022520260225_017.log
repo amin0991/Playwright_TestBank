@@ -1,0 +1,6 @@
+2026-02-25 02:35:07.354 [INF] Starting scenario: View account activity
+2026-02-25 02:35:43.962 [ERR] Scenario failed: View account activity
+2026-02-25 02:35:43.963 [ERR] Error: Timeout 30000ms exceeded.
+Call log:
+  - waiting for Locator("#accountId")
+2026-02-25 02:35:44.104 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02252026023543.png

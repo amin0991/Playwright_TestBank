@@ -1,0 +1,4 @@
+2026-02-25 02:36:56.756 [INF] Starting scenario: Open a new savings account
+2026-02-25 02:37:08.459 [ERR] Scenario failed: Open a new savings account
+2026-02-25 02:37:08.459 [ERR] Error: Expected isCreated to be true because New account should be created successfully, but found False.
+2026-02-25 02:37:08.614 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02252026023708.png

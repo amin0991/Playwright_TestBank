@@ -1,0 +1,6 @@
+2026-02-25 02:34:05.441 [INF] Starting scenario: Successful logout
+2026-02-25 02:34:11.897 [INF] Scenario passed: Successful logout
+2026-02-25 02:34:46.759 [INF] Starting scenario: Transfer funds between accounts
+2026-02-25 02:34:59.831 [ERR] Scenario failed: Transfer funds between accounts
+2026-02-25 02:34:59.831 [ERR] Error: Expected isSuccessful to be true because Transfer should be completed successfully, but found False.
+2026-02-25 02:34:59.996 [INF] Screenshot saved: C:\Users\mbelhajji\Playwright_TestBank\ParaBankAutomation\bin\Debug\net10.0\screenshots\BELHAJJI_Test_02252026023459.png

@@ -110,7 +110,7 @@ namespace ParaBankAutomation.Features
   this.FeatureBackground();
 #line hidden
 #line 12
-    testRunner.Given("I am logged in as \"john1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am logged in as \"john\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 13
     testRunner.And("I have at least one account with sufficient balance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -154,7 +154,7 @@ namespace ParaBankAutomation.Features
   this.FeatureBackground();
 #line hidden
 #line 21
-    testRunner.Given("I am logged in as \"john1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am logged in as \"john\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
     testRunner.And("I have multiple accounts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -195,7 +195,7 @@ namespace ParaBankAutomation.Features
   this.FeatureBackground();
 #line hidden
 #line 29
-    testRunner.Given("I am logged in as \"john1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am logged in as \"john\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 30
     testRunner.When("I navigate to the bill pay page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
