@@ -97,7 +97,7 @@ pipeline {
             agent {
                 docker {
                     image 'mcr.microsoft.com/dotnet/sdk:10.0'
-                    args '--user root'
+                    args '--user root --dns 8.8.8.8 --dns 8.8.4.4'
                 }
             }
             stages {
