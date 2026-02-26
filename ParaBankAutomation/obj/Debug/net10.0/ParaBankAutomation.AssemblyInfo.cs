@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParaBankAutomation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c6f1836d98982a2f76ed2ecce8b47be92ae0ec9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50740ae7dc0fd00aeb4922ae06c03b33639a1863")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParaBankAutomation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParaBankAutomation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
