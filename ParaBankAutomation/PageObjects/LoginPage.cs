@@ -1,10 +1,6 @@
 using ParaBankAutomation.Hooks;
-using ParaBankAutomation.PageObjects;
+using ParaBankAutomation.Pages;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace ParaBankAutomation.StepDefinitions
@@ -13,81 +9,61 @@ namespace ParaBankAutomation.StepDefinitions
     public class UserSetupSteps
     {
         private readonly LoginPage _loginPage;
-        private readonly RegisterPage _registerPage;
-        private readonly AccountServicesPage _accountServicesPage;
-        private readonly ScenarioContext _scenarioContext;
+        private readonly AccountOverviewPage _accountOverviewPage;
+        private readonly CommonMethods _commonMethods;
 
-        public UserSetupSteps(ScenarioContext scenarioContext, LoginPage loginPage, RegisterPage registerPage, AccountServicesPage accountServicesPage)
+        public UserSetupSteps(LoginPage loginPage, AccountOverviewPage accountOverviewPage, CommonMethods commonMethods)
         {
-            _scenarioContext = scenarioContext;
             _loginPage = loginPage;
-            _registerPage = registerPage;
-            _accountServicesPage = accountServicesPage;
+            _accountOverviewPage = accountOverviewPage;
+            _commonMethods = commonMethods;
         }
 
-        [Given("the user is on the login page")]
-        public async Task GivenTheUserIsOnTheLoginPage()
+        [Given(@"I am on the login page")]
+        public async Task GivenIAmOnTheLoginPage()
         {
-            await _loginPage.GoToLoginPage();
+            await _loginPage.GoToAsync();
         }
 
-        [When("the user enters username {string} and password {string}")]
-        public async Task WhenTheUserEntersUsernameAndPassword(string username, string password)
+        [When(@"I login with valid credentials ""(.*)"" and ""(.*)""")]
+        public async Task WhenILoginWithValidCredentialsAnd(string username, string password)
         {
-            await _loginPage.EnterUsername(username);
-            await _loginPage.EnterPassword(password);
+            await _loginPage.Login(username, password);
         }
 
-        [When("clicks the login button")]
-        public async Task WhenClicksTheLoginButton()
+        [Then(@"I should be logged in successfully")]
+        public async Task ThenIShouldBeLoggedInSuccessfully()
         {
-            await _loginPage.ClickLoginButton();
+            await _accountOverviewPage.IsPageLoaded();
         }
 
-        [Then("the user should be logged in successfully")]
-        public async Task ThenTheUserShouldBeLoggedInSuccessfully()
+        [When(@"I login with invalid credentials ""(.*)"" and ""(.*)""")]
+        public async Task WhenILoginWithInvalidCredentialsAnd(string username, string password)
         {
-            await _accountServicesPage.AssertWelcomeMessageIsDisplayed();
+            await _loginPage.Login(username, password);
         }
 
-        [Given("the user is on the register page")]
-        public async Task GivenTheUserIsOnTheRegisterPage()
+        [Then(@"I should see an error message ""(.*)""")]
+        public async Task ThenIShouldSeeAnErrorMessage(string errorMessage)
         {
-            await _registerPage.GoToRegisterPage();
+            await _loginPage.IsErrorMessageDisplayed(errorMessage);
         }
 
-        [When("the user enters first name {string}, last name {string}, address {string}, city {string}, state {string}, zip code {string}, phone {string}, ssn {string}, username {string}, password {string}, and confirm password {string}")]
-        public async Task WhenTheUserEntersRegistrationDetails(string firstName, string lastName, string address, string city, string state, string zipCode, string phone, string ssn, string username, string password, string confirmPassword)
+        [Given(@"I am logged in as ""(.*)"" with password ""(.*)""")]
+        public async Task GivenIAmLoggedInAsWithPassword(string username, string password)
         {
-            await _registerPage.EnterFirstName(firstName);
-            await _registerPage.EnterLastName(lastName);
-            await _registerPage.EnterAddress(address);
-            await _registerPage.EnterCity(city);
-            await _registerPage.EnterState(state);
-            await _registerPage.EnterZipCode(zipCode);
-            await _registerPage.EnterPhone(phone);
-            await _registerPage.EnterSsn(ssn);
-            await _registerPage.EnterUsername(username);
-            await _registerPage.EnterPassword(password);
-            await _registerPage.EnterConfirmPassword(confirmPassword);
+            await _loginPage.GoToAsync();
+            await _loginPage.Login(username, password);
+            await _accountOverviewPage.IsPageLoaded();
         }
 
-        [When("clicks the register button")]
-        public async Task WhenClicksTheRegisterButton()
+        [AfterScenario]
+        public async Task AfterScenario()
         {
-            await _registerPage.ClickRegisterButton();
-        }
-
-        [Then("the user should be registered successfully")]
-        public async Task ThenTheUserShouldBeRegisteredSuccessfully()
-        {
-            await _registerPage.AssertRegistrationSuccessMessage();
-        }
-
-        [AfterScenario("Logout")]
-        public async Task AfterScenarioLogout()
-        {
-            await _accountServicesPage.Logout();
+            if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("LoggedIn"))
+            {
+                await _accountOverviewPage.Logout();
+            }
         }
     }
 }
