@@ -5,21 +5,18 @@ namespace ParaBankAutomation.PageObjects
 {
     public class LoginPage : BasePage
     {
-        // Locators for elements on the login page
-        private const string UsernameInput = "input[name='username']";
-        private const string PasswordInput = "input[name='password']";
-        private const string LoginButton = "input[value='Log In']";
-        private const string ErrorMessage = ".error";
-        private const string RegisterLink = "#loginPanel p:nth-child(2) a";
+        // Locators
+        const string UsernameInput = "input[name='username']";
+        const string PasswordInput = "input[name='password']";
+        const string LoginButton = "input[value='Log In']";
+        const string ErrorMessage = ".error";
+        const string RegisterLink = "a[href*='register.htm']";
 
-        public LoginPage(IPage page, string baseUrl) : base(page, baseUrl)
-        {
-        }
+        public LoginPage(IPage page, string baseUrl) : base(page, baseUrl) { }
 
         public async Task NavigateToLoginPage()
         {
-            await Page.GotoAsync($"{_baseUrl}/index.htm");
-            await WaitForSelector(LoginButton);
+            await NavigateToUrl("index.htm");
         }
 
         public async Task EnterUsername(string username)
@@ -46,17 +43,19 @@ namespace ParaBankAutomation.PageObjects
 
         public async Task Logout()
         {
-            await Page.ClickAsync("text=Log Out");
+            await ClickElement("a[href='logout.htm']");
+            await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
         }
 
         public async Task<string> GetErrorMessage()
         {
+            await WaitForSelector(ErrorMessage);
             return await GetText(ErrorMessage);
         }
 
         public async Task<bool> IsLoginFormVisible()
         {
-            return await IsVisible(LoginButton);
+            return await IsVisible(UsernameInput) && await IsVisible(PasswordInput);
         }
 
         public async Task ClickRegisterLink()
