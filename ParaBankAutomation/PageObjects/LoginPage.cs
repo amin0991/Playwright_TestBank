@@ -1,18 +1,18 @@
 using Microsoft.Playwright;
 using System.Threading.Tasks;
+using ParaBankAutomation.PageObjects;
 
 namespace ParaBankAutomation.PageObjects
 {
     public class LoginPage : BasePage
     {
-        // Locators
+        public LoginPage(IPage page, string baseUrl) : base(page, baseUrl) { }
+
         const string UsernameInput = "input[name='username']";
         const string PasswordInput = "input[name='password']";
         const string LoginButton = "input[value='Log In']";
         const string ErrorMessage = ".error";
         const string RegisterLink = "a[href*='register.htm']";
-
-        public LoginPage(IPage page, string baseUrl) : base(page, baseUrl) { }
 
         public async Task NavigateToLoginPage()
         {
