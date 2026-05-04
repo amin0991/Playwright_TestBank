@@ -1,112 +1,99 @@
-using ParaBankAutomation.Hooks;
+using ParaBankAutomation.Base;
 using ParaBankAutomation.Pages;
-using Microsoft.Playwright;
-using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace ParaBankAutomation.StepDefinitions
 {
     [Binding]
-    public sealed class UserSetupSteps
+    public class UserSetupSteps
     {
-        private readonly IPage _page;
+        private readonly ScenarioContext _scenarioContext;
         private readonly LoginPage _loginPage;
-        private readonly HomePage _homePage;
-        private readonly AccountOverviewPage _accountOverviewPage;
-        private readonly PageManager _pages;
+        private readonly OverviewPage _overviewPage;
+        private readonly RegisterPage _registerPage;
+        private readonly AccountsOverviewPage _accountsOverviewPage;
+        private readonly OpenNewAccountPage _openNewAccountPage;
+        private readonly RequestLoanPage _requestLoanPage;
+        private readonly BillPayPage _billPayPage;
+        private readonly FindTransactionsPage _findTransactionsPage;
+        private readonly TransferFundsPage _transferFundsPage;
+        private readonly UpdateContactInfoPage _updateContactInfoPage;
 
-        public UserSetupSteps(IPage page, PageManager pages)
+        public UserSetupSteps(ScenarioContext scenarioContext, LoginPage loginPage, OverviewPage overviewPage,
+            RegisterPage registerPage, AccountsOverviewPage accountsOverviewPage, OpenNewAccountPage openNewAccountPage,
+            RequestLoanPage requestLoanPage, BillPayPage billPayPage, FindTransactionsPage findTransactionsPage,
+            TransferFundsPage transferFundsPage, UpdateContactInfoPage updateContactInfoPage)
         {
-            _page = page;
-            _pages = pages;
-            _loginPage = _pages.LoginPage;
-            _homePage = _pages.HomePage;
-            _accountOverviewPage = _pages.AccountOverviewPage;
+            _scenarioContext = scenarioContext;
+            _loginPage = loginPage;
+            _overviewPage = overviewPage;
+            _registerPage = registerPage;
+            _accountsOverviewPage = accountsOverviewPage;
+            _openNewAccountPage = openNewAccountPage;
+            _requestLoanPage = requestLoanPage;
+            _billPayPage = billPayPage;
+            _findTransactionsPage = findTransactionsPage;
+            _transferFundsPage = transferFundsPage;
+            _updateContactInfoPage = updateContactInfoPage;
         }
 
-        [Given(@"I am on the ParaBank website")]
-        public async Task GivenIAmOnTheParaBankWebsite()
+
+        [Given(@"I am on the login page")]
+        public void GivenIAmOnTheLoginPage()
         {
-            await _pages.NavigateToPage<LoginPage>();
+            _loginPage.GoTo();
         }
 
-        [When(@"I enter a valid username '([^']*)' and password '([^']*)'")]
-        public async Task WhenIEnterAValidUsernameAndPassword(string username, string password)
+        [Given(@"I am logged in as a new user with username ""(.*)"" and password ""(.*)""")]
+        public void GivenIAmLoggedInAsANewUserWithUsernameAndPassword(string username, string password)
         {
-            await _loginPage.EnterUsername(username);
-            await _loginPage.EnterPassword(password);
+            _registerPage.GoTo();
+            _registerPage.FillFormAndRegister(username, password);
+            _scenarioContext["username"] = username;
+            _scenarioContext["password"] = password;
         }
 
-        [When(@"I click the Login button")]
-        public async Task WhenIClickTheLoginButton()
+        [Given(@"I am logged in with username ""(.*)"" and password ""(.*)""")]
+        public void GivenIAmLoggedInWithUsernameAndPassword(string username, string password)
         {
-            await _loginPage.ClickLoginButton();
+            _loginPage.GoTo();
+            _loginPage.Login(username, password);
+            _scenarioContext["username"] = username;
+            _scenarioContext["password"] = password;
         }
 
-        [Then(@"I should be logged in successfully")]
-        public async Task ThenIShouldBeLoggedInSuccessfully()
+        [When(@"I register a new user with first name ""(.*)"", last name ""(.*)"", address ""(.*)"", city ""(.*)"", state ""(.*)"", zip code ""(.*)"", phone ""(.*)"", ssn ""(.*)"", username ""(.*)"" and password ""(.*)"")]
+        public void WhenIRegisterANewUserWithFirstNameLastNameAddressCityStateZipCodePhoneSsnUsernameAndPassword(string firstName, string lastName, string address, string city, string state, string zipCode, string phone, string ssn, string username, string password)
         {
-            await _homePage.WaitForPageLoad();
-            Assert.IsTrue(await _homePage.IsLogoutButtonVisible(), "Login was not successful.");
+            _registerPage.FillFormAndRegister(firstName, lastName, address, city, state, zipCode, phone, ssn, username, password);
+            _scenarioContext["username"] = username;
+            _scenarioContext["password"] = password;
         }
 
-        [When(@"I enter an invalid username '([^']*)' and password '([^']*)'")]
-        public async Task WhenIEnterAnInvalidUsernameAndPassword(string username, string password)
+        [When(@"I log in with username ""(.*)"" and password ""(.*)"")]
+        public void WhenILogInWithUsernameAndPassword(string username, string password)
         {
-            await _loginPage.EnterUsername(username);
-            await _loginPage.EnterPassword(password);
+            _loginPage.Login(username, password);
         }
 
-        [Then(@"I should see an error message '([^']*)'")]
-        public async Task ThenIShouldSeeAnErrorMessage(string errorMessage)
+        [Then(@"I should be logged out")]
+        public void ThenIShouldBeLoggedOut()
         {
-            string actualErrorMessage = await _loginPage.GetErrorMessage();
-            Assert.AreEqual(errorMessage, actualErrorMessage, "Error message mismatch.");
+            _overviewPage.ClickLogoutLink();
+            _loginPage.AssertPageIsVisible();
         }
 
-        [Then(@"I should be redirected to the Account Overview page")]
-        public async Task ThenIShouldBeRedirectedToTheAccountOverviewPage()
+        [Then(@"I should see a logout link")]
+        public void ThenIShouldSeeALogoutLink()
         {
-            await _accountOverviewPage.WaitForPageLoad();
-            Assert.IsTrue(await _accountOverviewPage.IsAccountOverviewHeaderVisible(), "Not on Account Overview page.");
+            _overviewPage.AssertLogoutLinkIsVisible();
         }
 
-        [When(@"I navigate to the Register page")]
-        public async Task WhenINavigateToTheRegisterPage()
+        [When(@"I click the logout link")]
+        public void WhenIClickTheLogoutLink()
         {
-            await _loginPage.ClickRegisterButton();
-        }
-
-        [Then(@"I should be on the Register page")]
-        public async Task ThenIShouldBeOnTheRegisterPage()
-        {
-            await _pages.RegisterPage.WaitForPageLoad();
-            Assert.IsTrue(await _pages.RegisterPage.IsRegisterFormVisible(), "Not on Register page.");
-        }
-
-        [When(@"I am on the ParaBank Home page")]
-        public async Task WhenIAmOnTheParaBankHomePage()
-        {
-            await _pages.NavigateToPage<HomePage>();
-            await _homePage.WaitForPageLoad();
-        }
-
-        [When(@"I log out of the application")]
-        public async Task WhenILogOutOfTheApplication()
-        {
-            await _homePage.Logout();
-            await _pages.NavigateToPage<HomePage>(); // Assuming HomePage has a navigation method
-        }
-
-        [Then(@"I should be on the login page")]
-        public async Task ThenIShouldBeOnTheLoginPage()
-        {
-            await _loginPage.WaitForPageLoad();
-            Assert.IsTrue(await _loginPage.IsLoginButtonVisible(), "Not on Login page after logout.");
+            _overviewPage.ClickLogoutLink();
         }
     }
 }
